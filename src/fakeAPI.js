@@ -17,5 +17,9 @@ const people = [
 ];
 
 export default function fakeAPICall(i) {
-  return Promise.resolve(people[i]);
+  return new Promise((resolve) =>
+    setTimeout(() => {
+      resolve(people[i]);
+    }, 1000)
+  );
 }

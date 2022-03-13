@@ -22,4 +22,9 @@ describe("test resolve", () => {
       currentTemp: 18.6,
     });
   });
+  it("it takes 1000ms to resolve", async () => {
+    const start = new Date();
+    await fakeAPICall(2);
+    expect(new Date().getTime() - start.getTime()).toBeGreaterThan(1000);
+  });
 });
