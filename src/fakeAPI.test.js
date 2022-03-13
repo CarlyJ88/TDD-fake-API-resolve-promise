@@ -15,4 +15,11 @@ describe("test resolve", () => {
       currentTemp: 68.6,
     });
   });
+  it("test 3", async () => {
+    await expect(fakeAPICall(2)).resolves.toEqual({
+      name: "Belinda",
+      hasPets: true,
+      currentTemp: 18.6,
+    });
+  });
 });
